@@ -1,4 +1,4 @@
-FROM linuxbrew/alpine
+FROM linuxbrew/debian
 
 RUN brew upgrade
 RUN brew update
