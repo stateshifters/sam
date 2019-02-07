@@ -17,7 +17,7 @@ EXPOSE $PORT
 WORKDIR /app
 
 RUN sam --version
-
+USER root
 ENTRYPOINT sam local start-api -p $PORT --host 0.0.0.0 $EXTRA_PARAMS --docker-volume-basedir $DIR -n /app/lambda-env.json
 
 # DIR needs to be the project root ON THE HOST
